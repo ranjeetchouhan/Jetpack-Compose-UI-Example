@@ -1,1 +1,7 @@
 # Jetpack-Compose-UI-Example
+
+
+##You must have atleast Android Studio Build 4.2 Canary 2 for running this example.
+
+Here is few screenshot of App
+![Screenshot 1]
