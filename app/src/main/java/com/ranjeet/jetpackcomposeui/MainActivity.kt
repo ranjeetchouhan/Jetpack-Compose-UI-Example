@@ -53,27 +53,53 @@ fun FirstPage(context: Context) {
                     contentScale = ContentScale.Crop)
 
             Spacer(Modifier.preferredHeight(16.dp))
-                Text(text = "Welcome to Compose UI",
+
+            Card(
+                modifier = Modifier.fillMaxWidth(1f),
+                elevation = 5.dp,
+                shape = RoundedCornerShape(5.dp)) {
+                Surface(modifier = Modifier.padding(16.dp)) {
+                    Text(text = "Welcome to Compose UI",
                         style = typography.h6)
+                }
 
-                Text(text = "Jetpack Compose UI is just release in alpha version." +
-                        "Compose UI is a declarative UI just like Flutter. Easy to use." +
-                        "You can check more this repository and other tutorial for Compose UI." +
-                        "This is awesome library. Try it. you will love this.",
+            }
+            Spacer(Modifier.preferredHeight(16.dp))
+
+            Card(
+                modifier = Modifier.fillMaxWidth(1f),
+                elevation = 5.dp,
+                shape = RoundedCornerShape(5.dp)
+            ) {
+                Surface(modifier = Modifier.padding(16.dp)) {
+                    Text(text = "Jetpack Compose UI is just release in alpha version." +
+                            "Compose UI is a declarative UI just like Flutter. Easy to use. " +
+                            "You can check more this repository and other tutorial for Compose UI." +
+                            "This is awesome library. Try it. you will love this.",
                         style = typography.body1,textAlign = TextAlign.Justify)
+                }
+            }
 
+            Spacer(Modifier.preferredHeight(16.dp))
+            Card(
+                modifier = Modifier.fillMaxWidth(1f),
+                elevation = 5.dp,
+                shape = RoundedCornerShape(5.dp)
+            ) {
+                Surface(modifier = Modifier.padding(16.dp)) {
+                    Column() {
+                        Text(text = "Check out this repository",
+                            style = typography.body2)
+                        val url = "https://github.com/im-ranu/Jetpack-Compose-UI-Example"
+                        Text(text = url, modifier = Modifier.clickable(onClick = {
+                            Toast.makeText(context,"we're working on it",Toast.LENGTH_SHORT).show()
+                        }),style = typography.body2,color = Color.Blue)
+                    }
 
-            Spacer(Modifier.preferredHeight(8.dp))
-            Divider(color = Color.Gray,thickness = 1.dp)
-            Spacer(Modifier.preferredHeight(8.dp))
-            Text(text = "Check out this repository",
-            style = typography.body2)
-            val url = "https://github.com/im-ranu/Jetpack-Compose-UI-Example"
-
-            Text(text = url, modifier = Modifier.clickable(onClick = {
-                Toast.makeText(context,"Thanks for clicking",Toast.LENGTH_SHORT).show()
-            }), style = typography.body2)
+                }
+            }
             Spacer(Modifier.preferredHeight(48.dp))
+
 
 
             Button(elevation = 4.dp,
